@@ -1,0 +1,293 @@
+00<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promoción 2024</title>
+    <link rel="stylesheet" href="index.html">
+    <link rel="icon" type="image/x-icon" href="logo.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4c63af; /* Verde */
+            color: white; /* Letras blancas */
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            position: fixed; 
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #284aa7; /* Verde */
+            color: white;
+            padding: 1rem;
+            z-index: 1000; 
+        }
+        .nav-list {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .nav-list li a {
+            color: white; /* Letras blancas */
+            text-decoration: none;
+            padding: 14px 20px; /* Espaciado en los enlaces */
+            display: block;
+        }
+        .nav-list li a:hover {
+            background-color: #212888; /* Color de fondo al pasar el mouse */
+            border-radius: 5px;
+        }
+        section {
+            margin-top: 100px; /* Espacio para el menú fijo */
+            padding: 20px;
+            background-color: #fff;
+            max-width: 800px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .circle-container {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            margin: 2rem auto;
+            overflow-x: auto;
+        }
+        .circle-container li {
+            list-style: none;
+            position: relative;
+            width: 80px;
+            height: 80px;
+            margin: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .circle-container li img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            cursor: pointer; 
+            transition: transform 0.3s;
+        }
+        .circle-container li:hover img {
+            transform: translateZ(20px) scale(1.1);
+        }
+        .name {
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(221, 220, 220, 0.7);
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #6b6969;
+            color: white;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            text-align: center;
+            animation: fadeIn 0.4s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Promoción 2024</h1>
+    </header>
+
+    <nav>
+        <ul class="nav-list">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="info-general.html">Información General</a></li>
+            <li><a href="quienes-somos.html">¿Quiénes Somos?</a></li>
+            <li><a href="promocion2024.html">Promoció2024</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        
+        <h1>Lista de Estudiantes - Promoción 2024</h1>
+        <p>Felicitamos a todos los estudiantes que conforman la Promoción 2024.</p>
+
+        <div class="circle-container">
+            <ul style="display: flex;">
+                <li>
+                    <img src="C:\Users\dayanna zuniga\Desktop\LidnyProyect\historiafdr\WhatsApp Image 2024-10-23 at 10.14.44 PM (1).jpeg" alt="Jonathan Reyes" onclick="showModal('El tiempo y la historia no son más que un susurro en el vasto silencio del universo.')">
+                    <div class="name">Jonathan Reyes</div>
+                </li>
+                <li>
+                    <img src="C:\Users\dayanna zuniga\Desktop\LidnyProyect\historiafdr\arnoldo.jpeg" alt="Arnoldo Lopez" onclick="showModal('Cada paso que das en la vida es un ladrillo en la construcción de tus sueños. ¡Felicidades por este hito!')">
+                    <div class="name">Arnoldo Alvarenga</div>
+                </li>
+                <li>
+                    <img src="C:\Users\dayanna zuniga\Desktop\LidnyProyect\historiafdr\imagenes\imagen13.jpg" alt="Kenny Gomez" onclick="showModal('Nunca olvides tus raíces, pues son el cimiento de tus alas. ¡Adelante hacia lo desconocido!')">
+                    <div class="name">Kenny Gomez</div>
+                </li>
+                <li>
+                    <img src="C:\Users\dayanna zuniga\Desktop\LidnyProyect\historiafdr\imagenes\imagen7.jpg" alt="Erwin Lopez" onclick="showModal('Hoy celebramos tus logros; mañana, el mundo te espera con oportunidades. ¡Ve a conquistar tu destino!')">
+                    <div class="name">Erwin Lopez</div>
+                </li>
+                <li>
+                    <img src= "C:\Users\dayanna zuniga\Desktop\LidnyProyect\historiafdr\imagenes\imagen2.jpg"alt="Erick Morales" onclick="showModal('El futuro pertenece a quienes sueñan en grande y trabajan con pasión. ¡No dejes que nada te detenga!')">
+                    <div class="name">Erick Morales</div>
+                </li>
+                <li>
+                    <img src="C:\Users\dayanna zuniga\Desktop\LidnyProyect\historiafdr\imagenes\imagen14.jpg" alt="Jostyn Chavez" onclick="showModal('Cada final es solo el principio de una nueva historia llena de posibilidades. ¡Atrévete a escribirla!')">
+                    <div class="name">Jostyn Chavez</div>
+                </li>
+                <li>
+                    <img src="C:\Users\dayanna zuniga\Desktop\LidnyProyect\historiafdr\imagenes\imagen20.jpg" alt="Alex Mejia" onclick="showModal('Hoy inicia el viaje más emocionante de tu vida. ¡Que cada día sea una nueva aventura!')">
+                    <div class="name">Alex Mejia</div>
+                </li>
+                <li>
+                    <img src="C:\Users\dayanna zuniga\Desktop\LidnyProyect\historiafdr\imagenes\imagen21.jpg" alt="Daniel Enrique" onclick="showModal('Sigue tus sueños con valentía, porque son las estrellas que guiarán tu camino. ¡Nunca te detengas!')">
+                    <div class="name">Daniel Enrique</div>
+                </li>
+                <li>
+                    <img src="C:\Users\dayanna zuniga\Desktop\LidnyProyect\historiafdr\imagenes\imagen.jpg" alt="Greysi Cardona" onclick="showModal('Hoy comienzas una nueva aventura; el futuro es un lienzo en blanco. ¡Pinta tu historia!')">
+                    <div class="name">Greysi Cardona</div>
+                </li>
+                <li>
+                    <img src="C:\Users\dayanna zuniga\Desktop\LidnyProyect\historiafdr\imagenes\imagen1.jpg" alt="Astrid Chavez" onclick="showModal('Las memorias que has creado serán la luz que te acompañe en cada paso. ¡Llévalas contigo!')">
+                    <div class="name">Astris Chavez</div>
+                </li>
+                <li>
+                    <img src="C:\Users\dayanna zuniga\Desktop\LidnyProyect\historiafdr\imagenes\imagen3.jpg" alt="Ashely Herrera" onclick="showModal('Cierra este capítulo con gratitud y abre el siguiente con la valentía de un soñador. ¡Adelante!')">
+                    <div class="name">Ashely Herrera</div>
+                </li>
+                <li>
+                    <img src="C:\Users\dayanna zuniga\Desktop\LidnyProyect\historiafdr\imagenes\imagen4.jpg" alt="Ashely Daniela" onclick="showModal('Los mejores días de tu vida están aún por venir. ¡Abre los brazos a las oportunidades!')">
+                    <div class="name">Ashely Daniela</div>
+                </li>
+                <li>
+                    <img src="C:\Users\dayanna zuniga\Desktop\LidnyProyect\historiafdr\imagenes\imagen5.jpg" alt="Genesis Rachell" onclick="showModal('Nunca dejes de aprender y de crecer, porque el conocimiento es el faro que ilumina tu camino. ¡Sigue explorando!')">
+                    <div class="name">Genesis Rachell</div>
+                </li>
+                <li>
+                    <img src="C:\Users\dayanna zuniga\Desktop\LidnyProyect\historiafdr\imagenes\imagen8.jpg" alt="Loany Ortiz" onclick="showModal('Recuerda que cada fin es una puerta abierta a nuevos comienzos. ¡Aprovecha cada oportunidad!')">
+                    <div class="name">Loany Ortiz</div>
+                </li>
+                <li>
+                 <img src="C:\Users\dayanna zuniga\Desktop\LidnyProyect\historiafdr\imagenes\imagen9.jpg" alt="Yurit Mejia" onclick="showModal('Nunca dejes de aprender y de crecer, porque el conocimiento es el faro que ilumina tu camino. ¡Sigue explorando!')">
+                 <div class="name">Yurit Mejia</div>
+                
+                   
+                 <li>
+                    <img src="C:\Users\dayanna zuniga\Desktop\LidnyProyect\historiafdr\imagenes\imagen11.jpg" alt="Elsa Gallardo" onclick="showModal('Recuerda que cada fin es una puerta abierta a nuevos comienzos. ¡Aprovecha cada oportunidad!')">
+                    <div class="name">Elsa Gallardo</div>
+                <li>
+                    <img src="C:\Users\dayanna zuniga\Desktop\LidnyProyect\historiafdr\imagenes\imagen17.jpg" alt="Nayeli Murillol" onclick="showModal('Recuerda que cada fin es una puerta abierta a nuevos comienzos. ¡Aprovecha cada oportunidad!')">
+                    <div class="name">Nayeli Murillo</div>
+                </li>
+                <li>
+                    <img src="C:\Users\dayanna zuniga\Desktop\LidnyProyect\historiafdr\imagenes\imagen18.jpg" alt="Zuleyka" onclick="showModal('Recuerda que cada fin es una puerta abierta a nuevos comienzos. ¡Aprovecha cada oportunidad!')">
+                    <div class="name">Zuleyka Castro</div>
+                </li>
+                <li>
+                    <img src="C:\Users\dayanna zuniga\Desktop\LidnyProyect\historiafdr\imagenes\imagen19.jpg" alt="Kritza" onclick="showModal('Recuerda que cada fin es una puerta abierta a nuevos comienzos. ¡Aprovecha cada oportunidad!')">
+                    <div class="name">Kritza</div>
+                </li>
+                <li>
+                    <img src="C:\Users\dayanna zuniga\Desktop\LidnyProyect\historiafdr\imagenes\imagen10.jpg" alt="Heydi Molina" onclick="showModal('Recuerda que cada fin es una puerta abierta a nuevos comienzos. ¡Aprovecha cada oportunidad!')">
+                    <div class="name">Heydi Molina</div>
+                </li>
+                <li>
+                    <img src="C:\Users\dayanna zuniga\Desktop\LidnyProyect\historiafdr\imagenes\imagen12.jpg" alt="Meylin Alvarado" onclick="showModal('Recuerda que cada fin es una puerta abierta a nuevos comienzos. ¡Aprovecha cada oportunidad!')">
+                    <div class="name">Meilyn Alvarado</div>
+                </li>
+            </li>
+            <img src="C:\Users\dayanna zuniga\Desktop\LidnyProyect\historiafdr\imagenes\imagen15.jpg" alt="Angie Alvarenga" onclick="showModal('Recuerda que cada fin es una puerta abierta a nuevos comienzos. ¡Aprovecha cada oportunidad!')">
+            <div class="name">Andrea Benitez</div>
+            </li>
+            </li>
+            <img src="C:\Users\dayanna zuniga\Desktop\LidnyProyect\historiafdr\imagenes\imagen16.jpg" alt="Andrea Benitez" onclick="showModal('Recuerda que cada fin es una puerta abierta a nuevos comienzos. ¡Aprovecha cada oportunidad!')">
+            <div class="name">Andrea Benitez</div>
+            </li>
+            </ul>
+        </div>
+    </section>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="modalText"></p>
+        </div>
+    </div>
+    <section id="video">
+        <h2>Video Presentación</h2>
+        <video controls width="600">
+            <source src="C:\Users\dayanna zuniga\Documents\Carrea informatica\carera.mp4" type="video/mp4">
+            Tu navegador no soporta la etiqueta de video.
+        </video>
+       </section>
+
+    <footer>
+        <p>&copy; 2024 Instituto Franklin Delano Roosevelt. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function showModal(message) {
+            document.getElementById('modalText').innerText = message;
+            document.getElementById('myModal').style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('myModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
